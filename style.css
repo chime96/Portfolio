@@ -1,0 +1,413 @@
+*{
+  margin:5px;
+}
+
+/*Landing Page*/
+h1{
+  text-align: center;
+  font-size:3em;
+}
+
+p{
+  font-size:2em;
+}
+
+h1,p{
+  font-family:cursive;
+  -o-font-family:cursive;
+  -moz-font-family:cursive;
+  -webkit-font-family:cursive;
+}
+
+img{
+  transition:all 1s;
+}
+
+img:hover{
+  transform:scale(1.2);
+}
+
+ul{
+  list-style-type: none;
+}
+
+
+hr{
+  color:#008000;
+  border:2px solid #008000;
+  border-radius:20px;
+  margin-top:20%;
+}
+
+footer{
+  margin-top: 30%;
+}
+
+a:link,a:hover,a:visited,a:hover{
+  color:black;
+  text-decoration:none;
+}
+
+
+.navbar-nav-left{
+}
+
+.navbar-nav-down{
+  display:flex;
+  align-items:baseline;
+  margin-top:10%;
+}
+
+.navbar-nav-clear{
+  display:flex;
+  align-items:flex-start;
+}
+
+.container-fluid{
+  border-radius: 30px;
+  background-color: #FFFAFA;
+}
+
+.logo{
+  width:100px;
+  height:100px;
+  border:3px solid black;
+  border-radius:50%;
+  box-shadow: 2px 4px 4px 3px #C0C0C0;
+  -o-box-shadow:2px 4px 4px 3px #C0C0C0;
+  -moz-box-shadow:2px 4px 4px 3px #C0C0C0;
+  -webkit-box-shadow:2px 4px 4px 3px #C0C0C0;
+}
+
+
+.about{
+  padding:30px;
+  
+}
+
+.section {
+  margin-top: 20%;
+  margin-bottom: 20%;
+  background: url(https://images.unsplash.com/photo-1510674485131-dc88d96369b4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1201&q=80) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+
+
+.nav-text{
+  font-weight:700;
+  font-size:3em;
+  font-family:cursive;
+  -o-font-family:cursive;
+  -moz-font-family:cursive;
+  -webkit-font-family:cursive;
+}
+
+.nav-text-down{
+  clear:both;
+}
+
+/*Profile Page*/
+.intro{
+  margin-top:20%;
+}
+
+.pros{
+  margin-top:30%;
+}
+
+.cons{
+  margin-top:30%;
+}
+
+.nav-item-left{
+  display:flex;
+  justify-content:flex-start;
+}
+
+.nav-item-right{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.one{
+  display:flex;
+  justify-content:center;
+}
+
+.skill-learnt,.skill-learning,.hobby{
+  margin-top:20%;
+  margin-bottom:20%;
+}
+
+
+
+
+/*My Root Friend*/
+
+.robots {
+  margin-top: 20%;
+}
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg {
+	 background-color:black;
+	 transition:all 1s;
+	 transform: scale(1.1);
+}
+
+
+.head { 
+	width: 200px; 
+	margin:0 auto;
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+} 
+
+.eyes {
+	
+}
+
+.head:hover {
+	width: 300px;
+    transition: 1s ease-in-out;
+}
+
+.upper_body { 
+	width: 300px; 
+	height: 150px;
+	display: flex;
+	margin:0 auto;
+} 
+
+.left_arm, .right_arm { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px; 
+} 
+
+.left_arm { 
+	margin-right: 10px; 
+} 
+
+.left_arm:hover{
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.right_arm { 
+	margin-left:10px; 
+} 
+
+.right_arm:hover{
+   -webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+   -o-transform: rotate(-45deg);
+   -ms-transform: rotate(-45deg);
+   transform: rotate(-45deg);
+}
+
+.torso { 
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
+} 
+
+.lower_body { 
+	width: 200px; 
+	height: 200px;
+	/* This is another useful property. Hmm what do you think it does?*/
+	margin: 0 auto;
+
+} 
+
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px; 
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+} 
+
+.left_leg:hover {
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+
+.right_leg:hover{
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+
+.right_leg { 
+	margin-left: 100px; 
+  position: relative;
+  bottom:120px;
+  left:20px;
+}
+
+.left_eye, .right_eye { 
+	width: 20px; 
+	height: 20px; 
+	border-radius: 15px; 
+	background-color: red;  
+} 
+
+.left_eye { 
+	/* These properties are new and you haven't encountered
+	in this course. Check out CSS Tricks to see what it does! */
+	position: relative; 
+	top: 100px; 
+	left: 40px; 
+} 
+
+.right_eye { 
+	position: relative; 
+	top: 80px; 
+	left: 120px; 
+}
+
+
+
+
+/* Sigin Form */
+.signin{
+  margin-top:10%;
+  margin-bottom:10%;
+}
+
+
+.form{
+  margin-top:20%;
+  display:flex;
+  justify-content:center;
+  border:3px solid black;
+  border-radius:35px;
+  padding:10px;
+}
+
+.password,.username{
+  padding:8px;
+  width:250px;
+  border:3px solid black;
+  border-radius:20px;
+}
+
+.submit{
+  color:#008000;
+  margin-top:10%;
+  margin-left:35%;
+  padding:5px;
+  border:3px solid black;
+  border-radius:20px;
+  min-width:100px;
+  background-color:white;
+  font-family:cursive;
+}
+
+
+.forgotten-password{
+  font-size:14px;
+  display:flex;
+  justify-content:flex-end;
+  font-weight:bold;
+}
+
+.username-text,.password-text{
+  display:flex;
+  justify-content:center;
+}
+
+.checkbox{
+  margin-left:50%;
+  margin-top:5%;
+  width:20px;
+  height:20px;
+}
+
+.show{
+  font-family:cursive;
+  font-size:14px;
+  font-weight:bold;
+}
+
+
+/*Font Icon */
+
+.fa-key,.fa-user{
+  border:2px solid  #008000;;
+  border-radius:50%;
+  padding:5px;
+}
+
+/*--------Signup Form --------*/
+
+.form_one{
+  margin-left:10%;
+  margin-top:20%;
+  border:3px solid black;
+  border-radius:20px;
+  padding:25px;
+}
+
+.sign_up{
+  margin-top:20%;
+}
+
+#fullname,#username,#email,#country,#password,#confirm_password,#number,#submit{
+  padding:10px;
+  border:3px solid black;
+  border-radius:30px;
+  width:100%;
+}
+
+#submit{
+  margin-top:10%;
+  font-family:cursive;
+}
+
+
+/* Contact */
+
+.contact{
+  display:flex;
+  justify-content:center;
+  margin-top:5%;
+}
+
+.map{
+  margin-top:10%;
+}
+
+.comment{
+  display:flex;
+  justify-content:center;
+  margin-top:10%;
+  margin-bottom:10%;
+}
+
+.btn-primary{
+  font-family:cursive;
+  background-color:black;
+}
+
+/*+++++++++++++++++++++++++++++++*/
