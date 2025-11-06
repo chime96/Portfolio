@@ -1,1 +1,0 @@
-# The Al Kharsaah Solar Power Plant

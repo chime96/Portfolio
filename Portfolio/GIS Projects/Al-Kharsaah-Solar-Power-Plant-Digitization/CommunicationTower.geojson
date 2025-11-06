@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"name": "CommunicationTower",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "Latitude": 179595.28501600001, "Longitude": 385764.95436700003, "TowerID": "TWR_01", "PlantID": null, "Owner": "Ooredoo Corporate", "Operator": "Ooredoo or Vodafone Qatar", "BlockID": null, "TowerType": "Lattice", "TowerHeigh": 60, "Material": "Galvanished Steel", "WindResist": 160, "RadioType": null, "AntennaTyp": "Yagi", "AntennaCou": 4, "FrequencyB": "2.4GHz", "Coverage_R": 4000, "Power_Sour": "Solar", "Power_Rati": 2.5, "Backup_Pow": "Generator", "Installati": null, "ConditionS": "Good", "Remarks": null }, "geometry": { "type": "Point", "coordinates": [ 51.013394823239686, 25.224806995901162 ] } }
-]
-}
