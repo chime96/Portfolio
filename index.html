@@ -1,238 +1,1860 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ovu's Porfolio Homepage</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="https://github.com/chime96/Portfolio_G/blob/main/WhatsApp%20Image%202023-12-16%20at%208.44.34%20AM.jpeg?raw=true">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional GIS Portfolio showcasing certifications and mapping projects" />
+  <title>GIS Portfolio - Certificates & Projects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="https://github.com/chime96/Portfolio_G/blob/main/WhatsApp%20Image%202023-12-16%20at%208.44.34%20AM.jpeg?raw=true">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* All previous CSS styles remain the same */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;1,400&family=DM+Serif+Display&display=swap");
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            outline: none;
-            font-family: DM Sans, sans-serif;
-        }
+    :root {
+      --primary: #0a0a0f;
+      --primary-light: #12121a;
+      --secondary: #1a1a24;
+      --accent: #3b82f6;
+      --accent-light: #60a5fa;
+      --accent-dark: #2563eb;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-light: #94a3b8;
+      --background: #0a0a0f;
+      --card-bg: #12121a;
+      --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.7);
+      --border-radius: 12px;
+      --transition: all 0.3s ease;
+      --transition-slow: all 0.5s ease;
+    }
 
-        body {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: repeat(12, 1fr);
-            max-height: 100vh;
-            background-color: #141414;
-            position: relative;
-            overflow: hidden;
-        }
+    body {
+      background: linear-gradient(135deg, #0a0a0f 0%, #12121a 100%);
+      color: var(--text-primary);
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-        /* Navbar */
-        .navbar {
-            grid-column: 1 / -1;
-            grid-row: 1 / 2;
-            z-index: 100;
-        }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        /* Social Media Links */
-        .social {
-            grid-column: 1 / 2;
-            grid-row: 2 / 6;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-left: 20px;
-        }
+    header {
+      text-align: center;
+      padding: 80px 0 50px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+      border-radius: 0 0 30px 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
 
-        .social .icon-container {
-            margin-bottom: 1rem;
-        }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+      opacity: 0.1;
+    }
 
-        /* Hero and Small Images */
-        .hero {
-            grid-column: 6 / span 5;
-            grid-row: 2 / 13;
-            background: url("https://github.com/chime96/GIS_Project_Map_Png/blob/main/Niger%20Delta%20Concession%20Map.png?raw=true") no-repeat 50% 50% / cover;
-            background-size: cover;
-            height: 100%;
-            width: 100%;
-        }
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 15px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      background: linear-gradient(135deg, #fff 0%, #e2e8f0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+      display: inline-block;
+    }
 
-        .small1 {
-            grid-column: 1 / 3;
-            grid-row: 10 / 13;
-            background: url("https://github.com/chime96/GIS_Project_Map_Png/blob/main/Simple%20Design%20of%20Barcelona.png?raw=true") no-repeat 50% 50% / cover;
-        }
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, var(--accent), var(--accent-light));
+      border-radius: 2px;
+    }
 
-        .small2 {
-            grid-column: 4 / 6;
-            grid-row: 2 / 6;
-            background: url("https://github.com/chime96/Portfolio_G/blob/main/WhatsApp%20Image%202023-12-16%20at%208.44.34%20AM.jpeg?raw=true") no-repeat 50% 50% / cover;
-        }
+    .subtitle {
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 700px;
+      margin: 25px auto 30px;
+      font-weight: 300;
+      line-height: 1.7;
+    }
 
-        .small3 {
-            grid-column: 11 / 13;
-            grid-row: 10 / 13;
-            background: url("https://github.com/chime96/GIS_Project_Map_Png/blob/main/Nassau%20waterlines%20A4%20map.png?raw=true") no-repeat 50% 50% / cover;
-        }
+    .section-title {
+      text-align: center;
+      margin: 60px 0 40px;
+      color: var(--text-primary);
+      font-size: 2.2rem;
+      position: relative;
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+    }
 
-        /* Content section */
-        .content {
-            grid-column: 3 / 6;
-            grid-row: 7 / 9;
-            color: #fff;
-            text-align: right;
-            margin-right: 1rem;
-            font-weight: 400;
-        }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(to right, var(--accent), var(--accent-light));
+      margin: 20px auto;
+      border-radius: 2px;
+    }
 
-        .content p {
-            margin-top: 0.6rem;
-        }
+    /* Profile Section Styles */
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 60px;
+      padding: 40px 20px;
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--card-shadow);
+      position: relative;
+      overflow: hidden;
+    }
 
-        .header {
-            grid-column: 4 / 10;
-            grid-row: 8 / 10;
-            font-family: DM Serif Display, serif;
-            font-size: 6rem;
-            color: #fff;
-            margin-top: 0.65rem;
-        }
+    .profile-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, var(--accent), var(--accent-light));
+    }
 
-        @media (max-width: 1047px) {
-            .header {
-                font-size: 5rem;
-            }
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--accent);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      margin-bottom: 25px;
+      transition: var(--transition);
+    }
 
-            .content p {
-                font-size: 0.8rem;
-                margin: 1rem;
-            }
+    .profile-photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
 
-            .social img {
-                height: 80px;
-                width: auto;
-            }
+    .profile-name {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+      font-family: 'Playfair Display', serif;
+    }
 
-            .social img:last-child {
-                height: 60px;
-            }
-        }
+    .profile-title {
+      font-size: 1.2rem;
+      color: var(--accent-light);
+      margin-bottom: 25px;
+      font-weight: 500;
+    }
 
-        @media (max-width: 930px) {
-            body {
-                display: flex;
-                flex-direction: column;
-            }
+    .profile-description {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
 
-            .social {
-                order: 1;
-                margin-top: 2px;
-                margin-left: 2px;
-                justify-content: center;
-                flex-direction: row;
-                grid-row: auto;
-                grid-column: auto;
-            }
+    .experience-section {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-            .social .fa {
-                font-size: 1.5rem; /* Making the icons smaller */
-            }
+    .experience-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+      text-align: center;
+      position: relative;
+      padding-bottom: 10px;
+    }
 
-            .header {
-                order: 3;
-                font-size: 4rem;
-            }
+    .experience-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
 
-            .content {
-                order: 4;
-                text-align: center;
-                margin: 0 auto;
-            }
+    .experience-card {
+      background: var(--primary-light);
+      border-radius: var(--border-radius);
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      border-left: 4px solid var(--accent);
+      transition: var(--transition);
+    }
 
-            .small1, .small2, .small3, .hero, {
-                order: 5;
-                grid-column: auto;
-                grid-row: auto;
-            }
-            footer{
-                order: 6;
-                grid-column: auto;
-                grid-row: auto;
-            }
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
 
-            .hero {
-                height: 300px;
-            }
-        }
-    </style>
+    .experience-company {
+      font-size: 1.3rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
 
+    .experience-project {
+      font-size: 1.1rem;
+      color: var(--accent-light);
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .experience-details {
+      color: var(--text-secondary);
+      margin-bottom: 15px;
+    }
+
+    .experience-tasks {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .experience-tasks li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 10px;
+      color: var(--text-secondary);
+    }
+
+    .experience-tasks li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* Navigation */
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0 50px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .nav-tab {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 14px 30px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-size: 1rem;
+      font-weight: 500;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-tab::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: var(--transition-slow);
+    }
+
+    .nav-tab:hover::before {
+      left: 100%;
+    }
+
+    .nav-tab:hover, .nav-tab.active {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Certificate Slider Styles */
+    .slider-container {
+      width: 90%;
+      max-width: 900px;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .slider {
+      width: 100%;
+      height: 65vh;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--card-shadow);
+      background: var(--card-bg);
+      transition: var(--transition);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .slider:hover {
+      box-shadow: var(--card-shadow-hover);
+      transform: translateY(-5px);
+    }
+
+    .slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background-color: #1a1a24;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 1.1rem;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+      padding: 25px 0 15px;
+      font-weight: 500;
+    }
+
+    /* Navigation buttons */
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--primary);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      z-index: 10;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .slider-btn:hover {
+      background: white;
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .prev-btn {
+      left: 15px;
+    }
+
+    .next-btn {
+      right: 15px;
+    }
+
+    /* Dots indicator */
+    .dots-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 0 8px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .dot.active {
+      background: var(--accent);
+      transform: scale(1.2);
+    }
+
+    /* Auto-play controls */
+    .controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 15px;
+    }
+
+    .control-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 500;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .control-btn:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Projects Gallery Styles */
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      background: var(--card-bg);
+      border: 2px solid var(--accent-light);
+      color: var(--accent-light);
+      padding: 12px 24px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 500;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--accent);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      transition: var(--transition);
+      box-shadow: var(--card-shadow);
+      cursor: pointer;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, var(--accent), var(--accent-light));
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .project-card:hover .project-image {
+      transform: scale(1.05);
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-title {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .project-description {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: rgba(59, 130, 246, 0.2);
+      color: var(--accent-light);
+      padding: 6px 12px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    /* Project Modal */
+    .project-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      overflow-y: auto;
+      padding: 20px;
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-content {
+      max-width: 900px;
+      margin: 40px auto;
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+      animation: modalFadeIn 0.4s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal-header {
+      padding: 25px;
+      border-bottom: 1px solid #334155;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to right, var(--primary), var(--primary-light));
+      color: white;
+    }
+
+    .modal-title {
+      font-size: 1.8rem;
+      color: white;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: var(--transition);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .close-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .modal-body {
+      padding: 30px;
+    }
+
+    .modal-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-description {
+      margin-bottom: 25px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    .modal-features {
+      margin-bottom: 25px;
+    }
+
+    .modal-features h3 {
+      margin-bottom: 15px;
+      color: var(--text-primary);
+      font-size: 1.3rem;
+    }
+
+    .modal-features ul {
+      padding-left: 20px;
+    }
+
+    .modal-features li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 10px;
+      color: var(--text-secondary);
+    }
+
+    .modal-features li::before {
+      content: '•';
+      color: var(--accent);
+      font-weight: bold;
+      position: absolute;
+      left: -10px;
+    }
+
+    .modal-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .modal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+    }
+
+    .modal-link:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(59, 130, 246, 0.5);
+    }
+
+    /* Footer Styles */
+    footer {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+      padding: 60px 0 20px;
+      margin-top: 80px;
+      border-radius: 30px 30px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+      opacity: 0.1;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-section h3 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-section h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--accent-light);
+      border-radius: 2px;
+    }
+
+    .footer-section p {
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .contact-info {
+      list-style: none;
+    }
+
+    .contact-info li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-info i {
+      color: var(--accent-light);
+      margin-right: 12px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 50px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Loading state */
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      color: var(--accent);
+    }
+
+    /* Skip to main content link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--accent);
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      z-index: 1000;
+      transition: top 0.3s;
+      border-radius: 0 0 5px 0;
+      font-weight: 500;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Floating background elements */
+    .floating-bg {
+      position: fixed;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0) 70%);
+      z-index: -1;
+    }
+
+    .bg-1 {
+      top: 10%;
+      left: 5%;
+      width: 400px;
+      height: 400px;
+    }
+
+    .bg-2 {
+      bottom: 10%;
+      right: 5%;
+      width: 350px;
+      height: 350px;
+    }
+
+    /* Professional badge */
+    .professional-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Stats section */
+    .stats-section {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 50px 0;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      text-align: center;
+      background: var(--card-bg);
+      padding: 30px 20px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--card-shadow);
+      min-width: 180px;
+      transition: var(--transition);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .stat-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    /* New: Enhanced animations */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .floating-bg {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .bg-2 {
+      animation-delay: 2s;
+    }
+
+    /* New: Enhanced typography */
+    h1, h2, h3, h4, h5, h6 {
+      letter-spacing: -0.02em;
+    }
+
+    /* New: Improved focus styles for accessibility */
+    button:focus, a:focus {
+      outline: 2px solid var(--accent-light);
+      outline-offset: 2px;
+    }
+
+    /* New: Enhanced scrollbar for webkit browsers */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--primary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-light);
+    }
+
+    @media (max-width: 768px) {
+      .slider {
+        height: 50vh;
+      }
+      .caption {
+        font-size: 1rem;
+      }
+      .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+      .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      }
+      .modal-content {
+        margin: 20px auto;
+      }
+      .modal-links {
+        flex-direction: column;
+      }
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .nav-tabs {
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav-tab {
+        width: 80%;
+        text-align: center;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .stats-section {
+        gap: 20px;
+      }
+      .stat-item {
+        min-width: 140px;
+        padding: 20px 15px;
+      }
+      .stat-number {
+        font-size: 2rem;
+      }
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+      }
+      .profile-name {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .slider {
+        height: 40vh;
+      }
+      .caption {
+        font-size: 0.9rem;
+      }
+      .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .modal-header {
+        padding: 20px;
+      }
+      .modal-title {
+        font-size: 1.5rem;
+      }
+      .stats-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      .stat-item {
+        width: 100%;
+        max-width: 200px;
+      }
+      .profile-photo {
+        width: 130px;
+        height: 130px;
+      }
+      .profile-name {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Floating background elements -->
+  <div class="floating-bg bg-1"></div>
+  <div class="floating-bg bg-2"></div>
+  
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Portfolio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://chime96.github.io/Portfolio/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://chime96.github.io/Gallery/">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://chime96.github.io/Certificate/">Certificates</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <div class="container">
+    <header>
+      <div class="professional-badge">
+        <i class="fas fa-award"></i>
+        <span>GIS Professional</span>
+      </div>
+      <h1>GIS Portfolio</h1>
+      <p class="subtitle">Showcasing Certifications and Mapping Projects</p>
+    </header>
 
-    <!-- Social Media Links -->
-    <div class="social">
-        <div class="icon-container">
-            <a href="https://wa.me/+2349014784770"><i class="fa fa-whatsapp fa-3x" style="color:white"></i></a>
+    <!-- Profile Section -->
+    <section class="profile-section">
+      <img src="https://github.com/chime96/Portfolio_G/blob/main/WhatsApp%20Image%202023-12-16%20at%208.44.34%20AM.jpeg?raw=true" alt="Profile Photo" class="profile-photo">
+      <h2 class="profile-name">Chimeichea Amadi</h2>
+      <p class="profile-title">GIS Specialist | Analyst | Editor</p>
+      <p class="profile-description">Dedicated GIS professional with expertise in spatial analysis, cartography, and geospatial data management. Passionate about leveraging GIS technology to solve complex spatial problems and create impactful visualizations.</p>
+      
+      <div class="experience-section">
+        <h3 class="experience-title">Professional Experience</h3>
+        
+        <div class="experience-card">
+          <div class="experience-company">Jeel Engineering LLC, Oman</div>
+          <div class="experience-project">Daleel Petroleum LLC (DAL-18-018 & DAL-24-179 )</div>
+          <div class="experience-details">Contracted to Jeel Engineering LLC, Oman</div>
+          <ul class="experience-tasks">
+            <li>PROVISION OF GEOMATICS SERVICES FOR DALEEL PETROLEUM LLC</li>
+            <li>Hookup splitting for Flowlines</li>
+            <li>Road centerlines digitization for spatial planning</li>
+            <li>Asset management and geospatial database maintenance</li>
+          </ul>
         </div>
-        <div class="icon-container">
-            <a href="mailto:ovurizi@gmail.com"><i class="fa fa-envelope fa-3x" style="color:#FFDAB9"></i></a>
-        </div>
-        <div class="icon-container">
-            <a href="https://www.linkedin.com/in/chimeichea-amadi-32bbab242"><i class="fa fa-linkedin fa-3x" style="color:white"></i></a>
-        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+      <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">9</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4</div>
+        <div class="stat-label">Specializations</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Tools</div>
+      </div>
     </div>
 
-    <div class="header"></div>
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs">
+      <button class="nav-tab active" data-tab="certificates" aria-controls="certificates" aria-selected="true">Certificates</button>
+      <button class="nav-tab" data-tab="projects" aria-controls="projects" aria-selected="false">Projects</button>
+    </div>
+
+    <!-- Certificate Slider Section -->
+    <section class="tab-content active" id="certificates" role="tabpanel" aria-labelledby="certificates-tab">
+      <h2 class="section-title">ESRI Certifications</h2>
+      <div class="slider-container">
+        <div class="slider" aria-label="Certificate carousel">
+          <div class="slides">
+            <div class="slide">
+              <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/Certificates/Accessing%20Data%20in%20a%20Portal%20Using%20ArcGIS%20API%20for%20Python_Certificate_09202024_page-0001.jpg?raw=true" alt="ESRI Certificate: Accessing Data in a Portal Using ArcGIS API for Python">
+              <div class="caption">Accessing Data in a Portal Using ArcGIS API for Python</div>
+            </div>
+            <div class="slide">
+              <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/Certificates/Cartography_page-0001.jpg?raw=true" alt="ESRI Certificate: Cartography">
+              <div class="caption">Cartography</div>
+            </div>
+            <div class="slide">
+              <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/Certificates/Getting%20Started%20with%20Mapping%20and%20Visualization.jpg?raw=true" alt="ESRI Certificate: Getting Started with Mapping and Visualization">
+              <div class="caption">Getting Started with Mapping and Visualization</div>
+            </div>
+            <div class="slide">
+              <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/Certificates/GIS%20for%20Climate%20Action_Certificate_page-0001.jpg?raw=true" alt="ESRI Certificate: GIS for Climate Action">
+              <div class="caption">GIS for Climate Action</div>
+            </div>
+            <div class="slide">
+              <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/Certificates/Going%20Places%20with%20Spatial%20Analyis.jpg?raw=true" alt="ESRI Certificate: Going Places with Spatial Analysis">
+              <div class="caption">Going Places with Spatial Analysis</div>
+            </div>
+            <div class="slide">
+              <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/Certificates/Introduction%20to%20ArcGIS%20API%20for%20Python_Certificate_09202024_page-0001.jpg?raw=true" alt="ESRI Certificate: Introduction to ArcGIS API for Python">
+              <div class="caption">Introduction to ArcGIS API for Python</div>
+            </div>
+            <div class="slide">
+              <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/Certificates/Managing%20Raster%20Data%20Using%20ArcGis.jpg?raw=true" alt="ESRI Certificate: Managing Raster Data Using ArcGIS">
+              <div class="caption">Managing Raster Data Using ArcGIS</div>
+            </div>
+            <div class="slide">
+              <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/Certificates/Performing%20Hydrological%20Analysis%20using%20ArcGis.jpg?raw=true" alt="ESRI Certificate: Performing Hydrological Analysis Using ArcGIS Pro">
+              <div class="caption">Performing Hydrological Analysis Using ArcGIS Pro</div>
+            </div>
+            <div class="slide">
+              <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/Certificates/Python%20for%20Everyone.jpg?raw=true" alt="ESRI Certificate: Python for Everyone">
+              <div class="caption">Python for Everyone</div>
+            </div>
+          </div>
+          
+          <button class="slider-btn prev-btn" aria-label="Previous certificate">&#10094;</button>
+          <button class="slider-btn next-btn" aria-label="Next certificate">&#10095;</button>
+        </div>
+        
+        <div class="dots-container" role="tablist" aria-label="Certificate navigation dots">
+          <!-- Dots will be added by JavaScript -->
+        </div>
+        
+        <div class="controls">
+          <button class="control-btn" id="playBtn" aria-label="Pause auto-play">
+            <i class="fas fa-pause"></i>
+            <span>Pause</span>
+          </button>
+          <button class="control-btn" id="resetBtn" aria-label="Reset to first certificate">
+            <i class="fas fa-redo"></i>
+            <span>Reset</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Gallery Section -->
+    <section class="tab-content" id="projects" role="tabpanel" aria-labelledby="projects-tab">
+      <h2 class="section-title">Mapped Projects</h2>
+      <div class="filter-buttons" role="toolbar" aria-label="Project category filters">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
+        <button class="filter-btn" data-filter="Oil&Gas" aria-pressed="false">Oil&Gas</button>
+        <button class="filter-btn" data-filter="Environmental" aria-pressed="false">Environmental</button>
+        <button class="filter-btn" data-filter="Mining" aria-pressed="false">Mining</button>
+        <button class="filter-btn" data-filter="Topographic" aria-pressed="false">Topographic</button>
+      </div>
+
+      <div class="projects-grid" id="main-content">
+        <!-- Project 0 -->
+        <div class="project-card" data-category="Environmental" tabindex="0" role="button" aria-label="View Al Kharsaah Solar Power Plant project details">
+          <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Al-Kharsaah-Solar-Power-Plant-Digitization/Al%20Kharsaah%20Solar%20Power%20Plant.jpg?raw=true" alt="Al Kharsaah Solar Power Plant project visualization" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">Al Kharsaah Solar Power Plant</h3>
+            <p class="project-description">The Al Kharsaah Solar Power Plant Digitization project involved the creation and management of a comprehensive geospatial database for one of Qatars largest solar energy installations. The main goal was to digitize, structure, and analyze spatial data for the plants infrastructure and environmental footprint.</p>
+            <div class="project-tags">
+              <span class="tag">ArcGIS Pro</span>
+              <span class="tag">Digitization</span>
+              <span class="tag">Solar Energy</span>
+              <span class="tag">Cartography</span>
+              <span class="tag">CAD to GIS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 1 -->
+        <div class="project-card" data-category="Oil&Gas" tabindex="0" role="button" aria-label="View Niger Delta Oil&Gas Concession Map project details">
+          <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Niger%20Delta%20Oil&Gas%20Concession%20Map/Niger%20Delta%20Concession%20Map.png?raw=true" alt="Niger Delta Oil&Gas Concession Map project visualization" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">Niger Delta Oil&Gas Concession Map</h3>
+            <p class="project-description">This map represents the oil and gas concession areas within the Niger Delta region of Nigeria. The digitalization was carried out to correct and refine the spatial extent of the concession boundaries. Upon reviewing the existing concession map, it was observed that several areas outside the core Niger Delta—such as Lagos and parts of eastern Nigeria—were mistakenly included.</p>
+            <div class="project-tags">
+              <span class="tag">ArcGIS Pro</span>
+              <span class="tag">Digitization</span>
+              <span class="tag">Oil&Gas Blocks</span>
+              <span class="tag">Cartography</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-category="Oil&Gas" tabindex="0" role="button" aria-label="View Oman Oil&Gas Concession Map project details">
+          <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Oman%20Oil&Oil%20Concession%20Map/Concession.png?raw=true" alt="Oman Oil&Gas Concession Map project visualization" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">Oman Oil&Gas Concession Map</h3>
+            <p class="project-description">Oil & gas concession zoning in Oman, identifying licensed exploration and production areas.</p>
+            <div class="project-tags">
+              <span class="tag">Arcgis Pro</span>
+              <span class="tag">Digitization</span>
+              <span class="tag">Oil&Gas Block</span>
+              <span class="tag">Cartography</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-category="Mining" tabindex="0" role="button" aria-label="View Sultanate of Oman Mining Concession Map project details">
+          <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Oman%20Mining%20Concession%20Map/Mining%20Concession%20Map.png?raw=true" alt="Sultanate of Oman Mining Concession Map project visualization" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">Sultanate of Oman Mining Concession Map</h3>
+            <p class="project-description">This project involved converting the Sultanate of Omans mining concession map into a precise digital format. The process ensured accurate geo-referencing of concession boundaries to support better resource management, investment planning, and spatial analysis.</p>
+            <div class="project-tags">
+              <span class="tag">Arcgis Pro</span>
+              <span class="tag">Digitization</span>
+              <span class="tag">Mining Block</span>
+              <span class="tag">Cartography</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-category="Environmental" tabindex="0" role="button" aria-label="View Al Massarat Water Quality project details">
+          <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Al-Massarat%20Water%20Quality/Al%20Massarat%20Water%20Quality.png?raw=true" alt="Al Massarat Water Quality project visualization" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">Al Massarat Water Quality</h3>
+            <p class="project-description">Water quality assessment of Al Massarat using GIS for environmental and public health insights.</p>
+            <div class="project-tags">
+              <span class="tag">Arcgis Pro</span>
+              <span class="tag">Water Quality</span>
+              <span class="tag">Demographics</span>
+              <span class="tag">Cartography</span>
+              <span class="tag">Digitization</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" data-category="Environmental" tabindex="0" role="button" aria-label="View Rotterdam Flood Analysis project details">
+          <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Rotterdam_Flood-Analysis/Rotterdam%20Flood%20Analysis%202D%20A4.png?raw=true" alt="Rotterdam Flood Analysis project visualization" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">Rotterdam_Flood-Analysis</h3>
+            <p class="project-description">Flood risk analysis of Rotterdam to identify vulnerable zones and support mitigation efforts.</p>
+            <div class="project-tags">
+              <span class="tag">Arcgis Pro</span>
+              <span class="tag">Flood Detection</span>
+              <span class="tag">Cartography</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card" data-category="Environmental" tabindex="0" role="button" aria-label="View California Wildfire Analysis project details">
+          <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/California-Wildfire-AnalysisMap/California.jpg?raw=true" alt="California Wildfire Analysis project visualization" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">California Wildfire Analysis</h3>
+            <p class="project-description">Wildfire spread analysis in California using spatial data to support emergency planning.</p>
+            <div class="project-tags">
+              <span class="tag">ArcGIS Pro</span>
+              <span class="tag">Cartography</span>
+              <span class="tag">WildFire Analysis</span>
+            </div>
+          </div>
+        </div>
+        <!-- Project 7 -->
+        <div class="project-card" data-category="Environmental" tabindex="0" role="button" aria-label="View Monkey Puzzle Tree Analysis project details">
+          <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Temuco_Chile_Monkey_Puzzle-Tree_Analysis/Temuco_Monkey_puzzle_Tree_Analysis_Project.png?raw=true" alt="Monkey Puzzle Tree Analysis project visualization" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">Monkey Puzzle Tree Analysis</h3>
+            <p class="project-description">Tree population distribution and conservation analysis of Monkey Puzzle trees in Temuco, Chile.</p>
+            <div class="project-tags">
+              <span class="tag">ArcGIS Pro</span>
+              <span class="tag">Cartography</span>
+              <span class="tag">Monkey Puzzle Tree Analysis</span>
+            </div>
+          </div>
+        </div>
+        <!-- Project 8 -->
+        <div class="project-card" data-category="Topographic" tabindex="0" role="button" aria-label="View MK-ContourPolygon project details">
+          <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/MK-ContourPolygon%20Map/MK-ContourPolygon.png?raw=true" alt="MK-ContourPolygon project visualization" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">MK-ContourPolygon</h3>
+            <p class="project-description">Contour mapping of Mount Kilimanjaro for elevation visualization and terrain modeling.</p>
+            <div class="project-tags">
+              <span class="tag">ArcGIS Pro</span>
+              <span class="tag">Cartography</span>
+              <span class="tag">Topographic</span>
+            </div>
+          </div>
+        </div>
+        <!-- Project 9 -->
+        <div class="project-card" data-category="Topographic" tabindex="0" role="button" aria-label="View Melbourne Map project details">
+          <img src="https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Melbourne-City-Height-Map/Melbourne%20City%20Height%20Map.png?raw=true" alt="Melbourne Map project visualization" class="project-image">
+          <div class="project-content">
+            <h3 class="project-title">Melbourne Map</h3>
+            <p class="project-description">2D and 3D elevation mapping of Melbourne to assist in urban modeling and architectural analysis.</p>
+            <div class="project-tags">
+              <span class="tag">ArcGIS Pro</span>
+              <span class="tag">Cartography</span>
+              <span class="tag">Topographic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About</h3>
+        <p>This portfolio showcases a collection of GIS certifications and mapping projects demonstrating expertise in spatial analysis, cartography, and geospatial data visualization.</p>
+        <p>All projects utilize industry-standard tools and methodologies to solve real-world spatial problems.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact Information</h3>
+        <ul class="contact-info">
+          <li>
+            <i class="fas fa-user" aria-hidden="true"></i>
+            <span>GIS Specialist | Analyst | Editor</span>
+          </li>
+          <li>
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>ovurizi@gmail.com</span>
+          </li>
+          <li>
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <span>+234 (913) 768-6848</span>
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <span>GIS Professional, Remote Nigeria</span>
+          </li>
+        </ul>
+        
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/chimeichea-amadi-32bbab242/" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/chime96" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://x.com/AmadiChimeichea" class="social-link" aria-label="Twitter">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://chime96.github.io/Portfolio/" class="social-link" aria-label="Portfolio">
+            <i class="fas fa-globe" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Technical Expertise</h3>
+        <p>Specializing in:</p>
+        <ul class="contact-info">
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span>ArcGIS Pro & Online</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span>QGIS & Open Source GIS</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span>Python for Geospatial Analysis</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span>Image Analysis</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span>Web Mapping & Cartography</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span>Geospatial Data Conversion</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span>Drone Data Processing</span></li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> <span>CAD to GIS & Digitization</span></li>
+        </ul>
+      </div>
+    </div>
     
-    <!-- Images section -->
-    <div class="small-img small1"></div>
-    <div class="small-img small2"></div>
-    <div class="hero"></div>
-
-    <!-- Content section -->
-    <div class="content">
-        <div class="heading">
-            <h3 style="color: #FFDAB9;">By Amadi Godswill</h3>
-            <p> Welcome to my portfolio. I am a GIS Analyst with expertise in asset management, GIS editing, and the digitalization of legacy maps without geodatabases. My experience spans wildfire analysis and flood analysis. Through advanced spatial analysis and precise mapping, I deliver actionable insights that drive effective solutions and planning strategies. </p>
-        </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Chime GIS Portfolio. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #60a5fa;" aria-hidden="true"></i> for the geospatial community</p>
     </div>
-
-    <div class="small-img small3"></div>
-     <footer class="text-center mt-5" style="color: #FFDAB9">
-    © 2025 Powered by Bootstrap & Me
   </footer>
 
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Project Modal -->
+  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle">Project Title</h2>
+        <button class="close-btn" id="closeModal" aria-label="Close project details">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="" alt="Project Image" class="modal-image" id="modalImage">
+        <p class="modal-description" id="modalDescription">Project description will appear here.</p>
+        <div class="modal-features">
+          <h3>Key Features</h3>
+          <ul id="modalFeatures">
+            <!-- Features will be added dynamically -->
+          </ul>
+        </div>
+        <div class="modal-links">
+          <a href="#" class="modal-link" id="modalLiveLink">View Live Project</a>
+          <a href="#" class="modal-link" id="modalSourceLink">Source Code</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Tab Navigation
+      const navTabs = document.querySelectorAll('.nav-tab');
+      const tabContents = document.querySelectorAll('.tab-content');
+      
+      navTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const tabId = tab.getAttribute('data-tab');
+          
+          // Update active tab
+          navTabs.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          
+          // Show active content
+          tabContents.forEach(content => {
+            content.classList.remove('active');
+            if (content.id === tabId) {
+              content.classList.add('active');
+            }
+          });
+        });
+      });
+      
+      // Certificate Slider Functionality
+      const slidesContainer = document.querySelector('.slides');
+      const slides = document.querySelectorAll('.slide');
+      const prevBtn = document.querySelector('.prev-btn');
+      const nextBtn = document.querySelector('.next-btn');
+      const dotsContainer = document.querySelector('.dots-container');
+      const playBtn = document.getElementById('playBtn');
+      const resetBtn = document.getElementById('resetBtn');
+      
+      let currentSlide = 0;
+      let slideInterval;
+      let isPlaying = true;
+      
+      // Create dots for certificate slider
+      slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-label', `Go to certificate ${index + 1}`);
+        if (index === 0) {
+          dot.classList.add('active');
+          dot.setAttribute('aria-selected', 'true');
+        }
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+      
+      const dots = document.querySelectorAll('.dot');
+      
+      // Function to update slider position
+      function updateSlider() {
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Update active dot
+        dots.forEach((dot, index) => {
+          const isActive = index === currentSlide;
+          dot.classList.toggle('active', isActive);
+          dot.setAttribute('aria-selected', isActive.toString());
+        });
+        
+        // Update aria-live region for screen readers
+        const currentCaption = slides[currentSlide].querySelector('.caption').textContent;
+        slidesContainer.setAttribute('aria-label', `Currently viewing: ${currentCaption}`);
+      }
+      
+      // Next slide function
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlider();
+      }
+      
+      // Previous slide function
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlider();
+      }
+      
+      // Go to specific slide
+      function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+        resetAutoPlay();
+      }
+      
+      // Auto-play functionality
+      function startAutoPlay() {
+        slideInterval = setInterval(nextSlide, 3000);
+        isPlaying = true;
+        playBtn.innerHTML = '<i class="fas fa-pause"></i><span>Pause</span>';
+        playBtn.setAttribute('aria-label', 'Pause auto-play');
+      }
+      
+      function stopAutoPlay() {
+        clearInterval(slideInterval);
+        isPlaying = false;
+        playBtn.innerHTML = '<i class="fas fa-play"></i><span>Play</span>';
+        playBtn.setAttribute('aria-label', 'Play auto-play');
+      }
+      
+      function resetAutoPlay() {
+        stopAutoPlay();
+        startAutoPlay();
+      }
+      
+      // Event listeners for certificate slider
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoPlay();
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoPlay();
+      });
+      
+      playBtn.addEventListener('click', () => {
+        if (isPlaying) {
+          stopAutoPlay();
+        } else {
+          startAutoPlay();
+        }
+      });
+      
+      resetBtn.addEventListener('click', () => {
+        currentSlide = 0;
+        updateSlider();
+        resetAutoPlay();
+      });
+      
+      // Keyboard navigation for certificate slider
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          prevSlide();
+          resetAutoPlay();
+        } else if (e.key === 'ArrowRight') {
+          nextSlide();
+          resetAutoPlay();
+        } else if (e.key === ' ') {
+          e.preventDefault();
+          if (isPlaying) {
+            stopAutoPlay();
+          } else {
+            startAutoPlay();
+          }
+        }
+      });
+      
+      // Initialize auto-play for certificate slider
+      startAutoPlay();
+      
+      // Projects Gallery Functionality
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Update active button
+          filterButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-pressed', 'false');
+          });
+          button.classList.add('active');
+          button.setAttribute('aria-pressed', 'true');
+          
+          const filterValue = button.getAttribute('data-filter');
+          
+          // Filter projects
+          projectCards.forEach(card => {
+            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+      
+      // Modal functionality for projects
+      const modal = document.getElementById('projectModal');
+      const closeModal = document.getElementById('closeModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalImage = document.getElementById('modalImage');
+      const modalDescription = document.getElementById('modalDescription');
+      const modalFeatures = document.getElementById('modalFeatures');
+      const modalLiveLink = document.getElementById('modalLiveLink');
+      const modalSourceLink = document.getElementById('modalSourceLink');
+      
+      // Project data for modal
+      const projectData = {
+        'Al Kharsaah Solar Power Plant': {
+          image: 'https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Al-Kharsaah-Solar-Power-Plant-Digitization/Al%20Kharsaah%20Solar%20Power%20Plant.jpg?raw=true',
+          description: 'The Al Kharsaah Solar Power Plant Digitization project involved the creation and management of a comprehensive geospatial database for one of Qatars largest solar energy installations. The main goal was to digitize, structure, and analyze spatial data for the plants infrastructure and environmental footprint.',
+          features: [
+            'Comprehensive geospatial database creation',
+            'Infrastructure and environmental footprint analysis',
+            'CAD to GIS data conversion',
+            'Solar energy facility mapping'
+          ],
+          liveLink: 'https://www.arcgis.com/apps/mapviewer/index.html?webmap=3352e7473d3e404a828f88382db6d876',
+          sourceLink: 'https://github.com/chime96/Portfolio/tree/main/Portfolio/GIS%20Projects/Al-Kharsaah-Solar-Power-Plant-Digitization'
+        },
+        'Niger Delta Oil&Gas Concession Map': {
+          image: 'https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Niger%20Delta%20Oil&Gas%20Concession%20Map/Niger%20Delta%20Concession%20Map.png?raw=true',
+          description: 'This map represents the oil and gas concession areas within the Niger Delta region of Nigeria. The digitalization was carried out to correct and refine the spatial extent of the concession boundaries. Upon reviewing the existing concession map, it was observed that several areas outside the core Niger Delta—such as Lagos and parts of eastern Nigeria—were mistakenly included. These areas are not traditionally or geographically part of the Niger Delta region, and their inclusion misrepresented the actual concession scope.The digitalization process was therefore necessary to ensure a more accurate geographic representation, focusing specifically on the true Niger Delta states (e.g., Rivers, Bayelsa, Delta, Akwa Ibom, Cross River, Edo, Abia, Imo, and Ondo). This refined version supports better regional planning, policy development, and resource management by aligning the map with the legitimate boundaries of the Niger Delta oil and gas production zones.',
+          features: [
+            'Accurate digitization of concession boundaries',
+            'Geographic correction of Niger Delta boundaries',
+            'Enhanced cartographic representation',
+            'Support for regional planning and resource management'
+          ],
+          liveLink: '#',
+          sourceLink: '#'
+        },
+        'Oman Oil&Gas Concession Map': {
+          image: 'https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Oman%20Oil&Oil%20Concession%20Map/Concession.png?raw=true',
+          description: 'Oil & gas concession zoning in Oman, identifying licensed exploration and production areas.',
+          features: [
+            'Concession boundary digitization',
+            'Exploration and production area identification',
+            'Cartographic design for clarity',
+            'Support for energy sector planning'
+          ],
+          liveLink: '#',
+          sourceLink: '#'
+        },
+        'Sultanate of Oman Mining Concession Map': {
+          image: 'https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Oman%20Mining%20Concession%20Map/Mining%20Concession%20Map.png?raw=true',
+          description: 'This project involved converting the Sultanate of Omans mining concession map into a precise digital format. The process ensured accurate geo-referencing of concession boundaries to support better resource management, investment planning, and spatial analysis. The result is a reliable, up-to-date map for use in modern GIS platforms.',
+          features: [
+            'Precise digitization of mining concessions',
+            'Accurate geo-referencing of boundaries',
+            'Enhanced resource management capabilities',
+            'Support for investment planning'
+          ],
+          liveLink: '#',
+          sourceLink: '#'
+        },
+        'Al Massarat Water Quality': {
+          image: 'https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Al-Massarat%20Water%20Quality/Al%20Massarat%20Water%20Quality.png?raw=true',
+          description: 'Water quality assessment of Al Massarat using GIS for environmental and public health insights.',
+          features: [
+            'Water quality parameter mapping',
+            'Environmental impact assessment',
+            'Public health correlation analysis',
+            'Demographic data integration'
+          ],
+          liveLink: '#',
+          sourceLink: '#'
+        },
+        'Rotterdam_Flood-Analysis': {
+          image: 'https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Rotterdam_Flood-Analysis/Rotterdam%20Flood%20Analysis%202D%20A4.png?raw=true',
+          description: 'Flood risk analysis of Rotterdam to identify vulnerable zones and support mitigation efforts.',
+          features: [
+            'Flood risk zone identification',
+            'Vulnerability assessment',
+            'Mitigation planning support',
+            'Urban resilience analysis'
+          ],
+          liveLink: '#',
+          sourceLink: '#'
+        },
+        'California Wildfire Analysis': {
+          image: 'https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/California-Wildfire-AnalysisMap/California.jpg?raw=true',
+          description: 'Wildfire spread analysis in California using spatial data to support emergency planning.',
+          features: [
+            'Wildfire spread modeling',
+            'Risk area identification',
+            'Emergency response planning',
+            'Historical fire pattern analysis'
+          ],
+          liveLink: '#',
+          sourceLink: '#'
+        },
+        'Monkey Puzzle Tree Analysis': {
+          image: 'https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Temuco_Chile_Monkey_Puzzle-Tree_Analysis/Temuco_Monkey_puzzle_Tree_Analysis_Project.png?raw=true',
+          description: 'Tree population distribution and conservation analysis of Monkey Puzzle trees in Temuco, Chile.',
+          features: [
+            'Population distribution mapping',
+            'Conservation priority identification',
+            'Habitat suitability analysis',
+            'Biodiversity assessment'
+          ],
+          liveLink: '#',
+          sourceLink: '#'
+        },
+        'MK-ContourPolygon': {
+          image: 'https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/MK-ContourPolygon%20Map/MK-ContourPolygon.png?raw=true',
+          description: 'Contour mapping of Mount Kilimanjaro for elevation visualization and terrain modeling.',
+          features: [
+            'Elevation contour generation',
+            'Terrain modeling',
+            'Topographic analysis',
+            '3D visualization preparation'
+          ],
+          liveLink: '#',
+          sourceLink: '#'
+        },
+        'Melbourne Map': {
+          image: 'https://github.com/chime96/Portfolio/blob/main/Portfolio/GIS%20Projects/Melbourne-City-Height-Map/Melbourne%20City%20Height%20Map.png?raw=true',
+          description: '2D and 3D elevation mapping of Melbourne to assist in urban modeling and architectural analysis.',
+          features: [
+            '2D and 3D elevation mapping',
+            'Urban modeling support',
+            'Architectural analysis',
+            'City planning applications'
+          ],
+          liveLink: '#',
+          sourceLink: '#'
+        }
+      };
+      
+      // Add click event to project cards
+      projectCards.forEach(card => {
+        card.addEventListener('click', () => {
+          const title = card.querySelector('.project-title').textContent;
+          openModal(title);
+        });
+        
+        // Add keyboard support for project cards
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const title = card.querySelector('.project-title').textContent;
+            openModal(title);
+          }
+        });
+      });
+      
+      // Function to open modal with project details
+      function openModal(title) {
+        const data = projectData[title];
+        if (data) {
+          modalTitle.textContent = title;
+          modalImage.src = data.image;
+          modalImage.alt = `${title} project visualization`;
+          modalDescription.textContent = data.description;
+          
+          // Clear previous features
+          modalFeatures.innerHTML = '';
+          
+          // Add new features
+          data.features.forEach(feature => {
+            const li = document.createElement('li');
+            li.textContent = feature;
+            modalFeatures.appendChild(li);
+          });
+          
+          modalLiveLink.href = data.liveLink;
+          modalSourceLink.href = data.sourceLink;
+          
+          modal.style.display = 'block';
+          document.body.style.overflow = 'hidden';
+          
+          // Focus management for accessibility
+          closeModal.focus();
+        }
+      }
+      
+      // Close modal
+      closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      });
+      
+      // Close modal when clicking outside
+      window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+      
+      // Close modal with Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
